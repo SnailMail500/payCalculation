@@ -5,11 +5,13 @@ Module Program
         Dim pay As Double
         Dim hours As Short
         Dim overTime As Short
+        Dim response As String
         Console.WriteLine("Pay Calculator")
         Call payRate(pay)
         Call time(hours)
-        Console.WriteLine("")
-
+        Console.WriteLine("Did you work overtime this week (y/n):")
+        response = Console.ReadLine()
+        Select Case response.ToLower
     End Sub
 
     Function payRate(hourlyRate)
